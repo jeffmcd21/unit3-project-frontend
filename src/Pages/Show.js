@@ -33,12 +33,12 @@ const Show = () => {
 
   <div className="form-group">
     <label>Event Start:</label>
-    <input type="input" name="start" placeholder="Event start" defaultValue={event.start} />
+    <input type="date" name="start" placeholder="Event start" defaultValue={event.start} />
   </div>
 
   <div className="form-group">
     <label>Event End:</label>
-    <input type="input" name="end" placeholder="Event end" defaultValue={event.end} />
+    <input type="date" name="end" placeholder="Event end" defaultValue={event.end} />
   </div>
   <div className="form-group">
     <label>Event price:</label>
