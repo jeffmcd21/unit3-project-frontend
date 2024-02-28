@@ -38,12 +38,34 @@ p {
     font-size: 0.6rem;
 }
 
-// .search-bar {
-//     justify-content: center;
-// }
-
+.search-bar-container {
+    display: flex;
+    flex-direction: column; /* Adjust this based on your layout needs */
+    align-items: center;
+  }
+  
+  
 
 body {
     background-color: lightslategray;
-    color: orange;
+    color: #ffa500;
 }
+.event-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffa500; /* Set your desired background color */
+    color: #ffffff; /* Set your desired text color */
+    border: 2px solid #3498db; /* Set your desired border color */
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .event-button:hover {
+    background-color: #5900ff; /* Set your desired hover background color */
+    border: 2px solid lightslategray; /* Set your desired hover border color */
+    color: #ffffff; /* Set your desired hover text color */
+  }

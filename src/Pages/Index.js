@@ -13,10 +13,10 @@ const Landing = () => {
 
   return (
     <div>
-      <div className="search-bar">
-      <h3>Search for Events</h3>
-      <input type="text" placeholder="Search bookmarks..." className="search-bar" onChange={handleSearch}/>
-      </div>
+     <div className="search-bar-container">
+     <h3>Search for Events</h3>
+     <input type="text" placeholder="Search bookmarks..." className="search-bar" onChange={handleSearch} />
+    </div>
       <div className="create-event">
       <h3>Create an Event</h3>
       <Form action='/create' method='post'>
