@@ -40,6 +40,10 @@ const Show = () => {
     <label>Event End:</label>
     <input type="input" name="end" placeholder="Event end" defaultValue={event.end} />
   </div>
+  <div className="form-group">
+    <label>Event price:</label>
+    <input type="input" name="price" placeholder="Event price" defaultValue={event.price} />
+  </div>
 
   <button type="submit">Update Event</button>
 </Form>

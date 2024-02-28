@@ -18,9 +18,10 @@ const Landing = () => {
       <Form action='/create' method='post'>
         <input type="input" name="name" placeholder="Event name" />
         <input type="input" name="image" placeholder="Event image" />
-        <input type="input" name="start" placeholder="Event start" />
-        <input type="input" name="end" placeholder="Event end" />
+        <input type="date" name="start" placeholder="Event start" />
+        <input type="date" name="end" placeholder="Event end" />
         <input type="input" name="location" placeholder="Event location" />
+        <input type="number" name="price" placeholder="Event price" />
         <button type="submit">Submit</button>
       </Form>
 
@@ -35,6 +36,7 @@ const Landing = () => {
           <h3>Location: {event.location}</h3>
           <p>Start: {new Date(event.start).toLocaleString()}</p>
           <p>End: {new Date(event.end).toLocaleString()}</p>
+          <p>Event Price: {event.price}</p>
         </div>
       ))}
     </div>
