@@ -1,6 +1,8 @@
 import React from "react";
 import { useLoaderData, Link, Form} from "react-router-dom";
 import { useState } from "react";
+import BackToTopButton from "../components/BackToTopButton";
+
 
 const Landing = () => {
   const events = useLoaderData();
@@ -11,8 +13,21 @@ const Landing = () => {
     setSearchQuery(action.target.value)
   };
 
+  const sortedEvents = events.slice().sort((a, b) => {
+    return new Date(a.start) - new Date(b.start)
+  });
+
+  const today = new Date().toISOString().slice(0, 10);
+
+  const currentEvents = sortedEvents.filter((event) => new Date(event.start).toISOString().slice(0, 10) === today);
+
+  const upcomingEvents = sortedEvents.filter((event) => new Date(event.start).getTime() > new Date().getTime());
+
+  const pastEvents = sortedEvents.filter((event) => new Date(event.start).getTime() < new Date().getTime());
+
+
   return (
-    <div>
+    <div className="index-container">
      <div className="search-bar-container">
      <h3>Search for Events</h3>
      <input type="text" placeholder="Search bookmarks..." className="search-bar" onChange={handleSearch} />
@@ -31,9 +46,10 @@ const Landing = () => {
         <button type="submit">Submit</button>
       </Form>
       </div>
-      <h2>Events</h2>
-      <div className="index-container">
-      {events.filter((event) => 
+
+      <h2>Current Events</h2>
+      <div className="index-container-curr">
+      {currentEvents.filter((event) => 
       event.name.toLowerCase().includes(searchQuery.toLowerCase())).map((event) => (
         <div key={event._id} className="events-container">
           <Link to={`/${event._id}`}>
@@ -41,12 +57,51 @@ const Landing = () => {
           </Link>
           {event.image && <img src={event.image} alt={event.name} />}
           <h5>Location: {event.location}</h5>
-          <p>Start: {new Date(event.start).toLocaleString()}</p>
-          <p>End: {new Date(event.end).toLocaleString()}</p>
+          <p>Start: {new Date(event.start).toISOString().slice(0, 10)}</p>
+          <p>End: {new Date(event.end).toISOString().slice(0, 10)}</p>
           <p>Event Price: ${event.price}</p>
         </div>
       ))}
       </div>
+      
+
+      <h2>Upcoming Events</h2>
+      <div className="index-container-upcom">
+      {upcomingEvents.filter((event) => 
+      event.name.toLowerCase().includes(searchQuery.toLowerCase())).map((event) => (
+        <div key={event._id} className="events-container">
+          <Link to={`/${event._id}`}>
+            <h3>{event.name}</h3>
+          </Link>
+          {event.image && <img src={event.image} alt={event.name} />}
+          <h5>Location: {event.location}</h5>
+          <p>Start: {new Date(event.start).toISOString().slice(0, 10)}</p>
+          <p>End: {new Date(event.end).toISOString().slice(0, 10)}</p>
+          <p>Event Price: ${event.price}</p>
+        </div>
+      ))}
+      </div>
+
+
+      <h2>Past Events</h2>
+      <div className="index-container-past">
+      {pastEvents.filter((event) => 
+      event.name.toLowerCase().includes(searchQuery.toLowerCase())).map((event) => (
+        <div key={event._id} className="events-container">
+          <Link to={`/${event._id}`}>
+            <h3>{event.name}</h3>
+          </Link>
+          {event.image && <img src={event.image} alt={event.name} />}
+          <h5>Location: {event.location}</h5>
+          <p>Start: {new Date(event.start).toISOString().slice(0, 10)}</p>
+          <p>End: {new Date(event.end).toISOString().slice(0, 10)}</p>
+          <p>Event Price: ${event.price}</p>
+        </div>
+      ))}
+      </div>
+
+
+      <BackToTopButton />
     </div>
   );
 };
