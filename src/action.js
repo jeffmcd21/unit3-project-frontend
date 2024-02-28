@@ -10,7 +10,8 @@ const updatedEvent = {
     image: formData.get('image'),
     start: formData.get('start'),
     end: formData.get('end'),
-    location: formData.get('location')
+    location: formData.get('location'),
+    price: formData.get('price')
 }
 await fetch(`${URL}/event/${params.id}`, {
     method: "put",
