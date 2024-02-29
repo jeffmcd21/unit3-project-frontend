@@ -84,3 +84,72 @@ body {
     border: 2px solid lightslategray; /* Set your desired hover border color */
     color: #ffffff; /* Set your desired hover text color */
   }
+  .delete-button {
+    background-color: #ffa500;
+    font-size: 16px;
+    color: #ffffff;
+    border: 2px solid #3498db;
+  }
+  .delete-button:hover {
+    background-color: #5900ff;
+    border: 2px solid lightslategray;
+  }
+  .center-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+  }
+  .event-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px
+  }
+input {
+  width: 100%;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #ffa500;
+    font-size: 16px;
+    color: #ffffff;
+    border: 2px solid #3498db;
+    
+}
+.update-heading {
+  display: flex;
+  justify-content: center;
+}
+.create-event {
+  text-align: center;
+  width: 90%;
+  padding: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+.parent-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar-container {
+  width: 100%;
+  padding: 2px;
+  margin-top: 50;
+ 
+}
+.search-bar {
+  width: 15%;
+ text-align: center;
+}
