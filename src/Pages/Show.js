@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, Form } from 'react-router-dom';
+import '../styles.scss'; 
 const Show = () => {
 
   const event = useLoaderData();
@@ -12,9 +13,7 @@ const Show = () => {
       <p>End: {event.end}</p>
       <p>Location: {event.location}</p>
 
-      <h2>Update {event.name}</h2>
-
-
+      <h2 className="update-heading">Update {event.name}</h2>
       <Form action={`/update/${event._id}`} method="post" className="event-form">
   <div className="form-group">
     <label>Event Name:</label>
@@ -47,6 +46,10 @@ const Show = () => {
 
   <button type="submit">Update Event</button>
 </Form>
+
+
+
+<div className="center-container">
 <h2>{`Delete ${event.name}`}</h2>
       <Form action={`/delete/${event._id}`} method="post">
         <input
@@ -55,7 +58,7 @@ const Show = () => {
           className="delete-button" 
         />
       </Form> 
-
+      </div>
     </div>
   );
 };

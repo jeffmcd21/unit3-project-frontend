@@ -2,6 +2,7 @@ import React from "react";
 import { useLoaderData, Link, Form} from "react-router-dom";
 import { useState } from "react";
 import BackToTopButton from "../components/BackToTopButton";
+import '../styles.scss';
 
 
 const Landing = () => {
@@ -32,6 +33,7 @@ const Landing = () => {
      <h3>Search for Events</h3>
      <input type="text" placeholder="Search bookmarks..." className="search-bar" onChange={handleSearch} />
     </div>
+      <div className="parent-container">
       <div className="create-event">
       <h3>Create an Event</h3>
       <Form action='/create' method='post'>
@@ -45,6 +47,7 @@ const Landing = () => {
         </div>
         <button type="submit">Submit</button>
       </Form>
+      </div>
       </div>
 
       <h2>Current Events</h2>
