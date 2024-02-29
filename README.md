@@ -1,60 +1,66 @@
-# Event Calander
-**Team:**
+# Eventful App
+## **Team:**
  + Rabhi Alqadi
  + Diana Hudson
  + Jeff McDonald
- + Geno
+ + Geno Jimenez
 
- ## **Backend (Express):**
- [Deployed](https://unit3project-1.onrender.com)
+
 ## **Frontend (React App):**
 
+[Deployed]()
 
-## Libraries:
-React
-React Router
+#### Libraries:
+- React
+- React Router
 
-## React Router Routes:
--Home Page ("/")
+### React Router Routes:
+- Home Page: "/"
+  - Display the event calendar and list of upcoming events.
 
--Display the event calendar and list of upcoming events.
-Event Detail Page ("/events/:eventId")
+- Event Detail Page: "/events/:eventId"
+  - Display detailed information about a specific event.
 
--Display detailed information about a specific event.
-Create Event Page ("/create-event")
+- Create Event Page: "/create-event"
+  - Allow users to create new events.
 
--Allow users to create new events.
-
-## React Architecture (Markdown):
-markdown
+### React Architecture:
+### Markdown
 
 - App
   - Header
+
   - Router
     - HomePage
     - EventDetailPage
     - CreateEventPage
+
   - Footer
 
 
-## Backend:
 
-Libraries:
+ ## **Backend (Express):**
+ [Deployed](https://unit3project-1.onrender.com)
+###  Libraries
 
-Express.js
-dotenv
-morgan
-cors
-mongoose
+- Express.js
+- dotenv
+- morgan
+- cors
+- mongoose
 
-**Routes:**
-GET /events: Retrieve a list of events from the Eventbrite API.
-GET /events/:eventId: Retrieve detailed information about a specific event.
-POST /events: Create a new event on Eventbrite.
+### **Routes:**
+- GET /events: Retrieve a list of events.
+
+- GET /events/:eventId: Retrieve specific event.
+
+- POST /events: Create a new event.
+
+
 
 ## Models (ERD):
-+----------------+
-|      Event     |
+
+<!-- |      Event     |
 |----------------|
 +----------------+
 | event_id (PK)  |
@@ -65,8 +71,8 @@ POST /events: Create a new event on Eventbrite.
 | location       |
 | price          |
 | organizer_name |
-| category       |
-+----------------+
+| category       | -->
 
-## Deisgn Mockup
+
+### Deisgn Mockup
 ![My Desktop View](https://i.imgur.com/UDTiXjK.png)
