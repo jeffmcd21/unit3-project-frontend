@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <div className="background-image">
       <nav className="nav">
-        <Link to="/">
+        {/* <Link to="/">
           <button className="event-button">Event App</button>
-        </Link>
+        </Link> */}
       </nav>
     </div>
   );
