@@ -74,5 +74,5 @@
 | category       | -->
 
 
-### Deisgn Mockup
+### Design Mockup
 ![My Desktop View](https://i.imgur.com/UDTiXjK.png)
