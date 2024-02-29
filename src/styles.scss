@@ -30,6 +30,7 @@
   justify-content: space-around;
   padding: 1rem;
   align-items: center;
+  border: 1px solid black;
 }
 
 .index-container-past {
@@ -45,7 +46,13 @@
     flex-direction: column;
     width: 25%;
     padding: 1.0rem;
+    background-color: white;
+    margin: .05rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 300px;
     
+    //border: 1px solid black;
     // align-items: center;    
 }
 
@@ -62,8 +69,8 @@ p {
   
 
 body {
-    background-color: lightslategray;
-    color: #ffa500;
+    background-color: rgb(131, 139, 247);
+    color: rgb(70, 49, 90)
 }
 .event-button {
     display: inline-block;
@@ -152,4 +159,15 @@ button {
 .search-bar {
   width: 15%;
  text-align: center;
+}
+a:link {
+  color: rgb(13, 47, 140);
+}
+/* visited link */
+a:visited {
+  color: rgb(13, 47, 140)
+}
+/* mouse over link */
+a:hover {
+  color: lightcoral;
 }

@@ -7,12 +7,13 @@ const Show = () => {
 
   return (
     <div className='event-show'>
+      <div className='show-container'>
       <h1>{event.name}</h1>
       <img src={event.image} alt={`Event: ${event.name}`} />
       <p>Start: {event.start}</p>
       <p>End: {event.end}</p>
       <p>Location: {event.location}</p>
-
+    </div>
       <h2 className="update-heading">Update {event.name}</h2>
       <Form action={`/update/${event._id}`} method="post" className="event-form">
   <div className="form-group">
