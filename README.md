@@ -8,7 +8,7 @@
 
 ## **Frontend (React App):**
 
-[Deployed]()
+[Deployed](https://group-project-events-app.netlify.app/)
 
 #### Libraries:
 - React
