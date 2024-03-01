@@ -6,6 +6,7 @@ const Show = () => {
   const event = useLoaderData();
 
   return (
+    <div className="center-container">
     <div className='event-show'>
       <div className='show-container'>
       <h1>{event.name}</h1>
@@ -50,7 +51,7 @@ const Show = () => {
 
 
 
-<div className="center-container">
+
 <h2>{`Delete ${event.name}`}</h2>
       <Form action={`/delete/${event._id}`} method="post">
         <input

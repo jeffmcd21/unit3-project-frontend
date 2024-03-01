@@ -38,7 +38,7 @@ const BackToTopButton = () => {
             }}
             onClick={scrollUp}>^</button>
         )}
-        BackToTopButton</div>
+        </div>
   )
 }
 

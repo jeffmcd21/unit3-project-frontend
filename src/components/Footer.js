@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
  const Footer = () => {
    return (
     <div className="footer-container">
+        <div className="footer-details">
     <Link to="/">
         <div>Event app</div>
     </Link>
@@ -15,6 +16,7 @@ import { Link } from "react-router-dom"
                     <i class="fa-solid fa-biohazard fa-fade"></i>|</a>
                 <h6>Click for GitHub Repo</h6>
             </h5>
+        </div>
     </div>
    )
  }
