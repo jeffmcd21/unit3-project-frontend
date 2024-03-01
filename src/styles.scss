@@ -5,15 +5,24 @@
 
 
 .background-image {
+  display: flex;
     background-image: url("https://spotme.com/wp-content/uploads/2020/07/Hero-1.jpg");
     width: 100%;
-    height: 25vh;
+    height: 20vh;
+    justify-content: center;
     object-fit: cover;
     // object-position: 50% 0;
     background-position: center;
-    border: 2.5px solid orange;
-    border-radius: 50px;
+    border: 2.5px solid rgb(255, 87, 0);
+    border-radius: 75px;
     box-shadow: 0px 0px 5px 5px rgba(40, 0, 238, 0.75);
+}
+
+.event-section-header {
+  padding-left: 2em;
+  font-size: 30px;
+  color: black;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); 
 }
 
 .index-container-curr {
@@ -22,6 +31,7 @@
     justify-content: space-around;
     padding: 1rem;
     align-items: center;
+    outline: 1px solid black;
 }
 
 .index-container-upcom {
@@ -30,7 +40,7 @@
   justify-content: space-around;
   padding: 1rem;
   align-items: center;
-  border: 1px solid black;
+  outline: 1px solid black;
 }
 
 .index-container-past {
@@ -39,22 +49,34 @@
   justify-content: space-around;
   padding: 1rem;
   align-items: center;
+  outline: 1px solid black;
 }
 
 .events-container {
     display: flex;
     flex-direction: column;
     width: 25%;
-    padding: 1.0rem;
+    padding: 0.5rem;
     background-color: white;
-    margin: .05rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 5px;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
     max-width: 300px;
-    
+    outline: 2px solid rgb(255, 87, 0);
     //border: 1px solid black;
     // align-items: center;    
 }
+
+.events-container:hover {
+  box-shadow: 0 0 3px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+// @media (max-width: 768px) {
+//   .events-container {
+//     object-position: 50% 25%; /* Crop more from the bottom on smaller screens */
+//   }
+// }
 
 p {
     font-size: 0.6rem;
@@ -64,9 +86,9 @@ p {
     display: flex;
     flex-direction: column; /* Adjust this based on your layout needs */
     align-items: center;
-  }
-  
-  
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+  }  
 
 body {
     background-color: rgb(131, 139, 247);
@@ -79,7 +101,7 @@ body {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    background-color: #ffa500; /* Set your desired background color */
+    background-color: rgb(255, 87, 0); /* Set your desired background color */
     color: #ffffff; /* Set your desired text color */
     border: 2px solid #3498db; /* Set your desired border color */
     cursor: pointer;
@@ -92,7 +114,7 @@ body {
     color: #ffffff; /* Set your desired hover text color */
   }
   .delete-button {
-    background-color: #ffa500;
+    background-color: rgb(255, 87, 0);
     font-size: 16px;
     color: #ffffff;
     border: 2px solid #3498db;
@@ -102,10 +124,10 @@ body {
     border: 2px solid lightslategray;
   }
   .center-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .event-form {
     max-width: 400px;
@@ -121,6 +143,13 @@ justify-content: center;
     display: block;
     margin-bottom: 5px
   }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+  
 input {
   width: 100%;
   padding: 2px;
@@ -128,12 +157,18 @@ input {
 }
 
 button {
-  background-color: #ffa500;
+  background-color: rgb(255, 87, 0);
     font-size: 16px;
     color: #ffffff;
     border: 2px solid #3498db;
-    
 }
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .update-heading {
   display: flex;
   justify-content: center;
@@ -144,6 +179,8 @@ button {
   padding: 2px;
   margin-bottom: 10px;
   display: block;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
 }
 .parent-container {
   display: flex;
@@ -157,17 +194,42 @@ button {
  
 }
 .search-bar {
-  width: 15%;
- text-align: center;
+  width: 25%;
+  margin: auto;
+  text-align: center;
 }
 a:link {
-  color: rgb(13, 47, 140);
+  color: lightgray;
 }
 /* visited link */
 a:visited {
-  color: rgb(13, 47, 140)
+  color: lightgray;
 }
 /* mouse over link */
 a:hover {
-  color: lightcoral;
+  color: rgb(255, 87, 0);
 }
+
+
+.footer-container {
+  // align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  background-image: linear-gradient(black, rgb(131, 139, 247));
+  color: lightgray;
+}
+
+.footer-container::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 30em;
+  background: lightgray;
+  margin: 0.5em auto;
+  opacity: 0.75;
+}
+
+// .footer-detail {
+//   display: flex;
+//   flex-direction: row;
+// }

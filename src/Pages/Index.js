@@ -36,7 +36,7 @@ const Landing = () => {
       <div className="parent-container">
       <div className="create-event">
       <h3>Create an Event</h3>
-      <Form action='/create' method='post'>
+      <Form action='/create' method='post' className="form">
       <div className="form-container">
         <input type="input" name="name" placeholder="Event name" />
         <input type="input" name="image" placeholder="Event image" />
@@ -45,12 +45,12 @@ const Landing = () => {
         <input type="input" name="location" placeholder="Event location" />
         <input type="number" name="price" placeholder="Event price" />
         </div>
-        <button type="submit">Submit</button>
       </Form>
+        <button type="submit">Submit</button>
       </div>
       </div>
 
-      <h2>Current Events</h2>
+      <h2 className="event-section-header">Current Events</h2>
       <div className="index-container-curr">
       {currentEvents.filter((event) => 
       event.name.toLowerCase().includes(searchQuery.toLowerCase())).map((event) => (
@@ -68,7 +68,7 @@ const Landing = () => {
       </div>
       
 
-      <h2>Upcoming Events</h2>
+      <h2 className="event-section-header">Upcoming Events</h2>
       <div className="index-container-upcom">
       {upcomingEvents.filter((event) => 
       event.name.toLowerCase().includes(searchQuery.toLowerCase())).map((event) => (
@@ -86,7 +86,7 @@ const Landing = () => {
       </div>
 
 
-      <h2>Past Events</h2>
+      <h2 className="event-section-header">Past Events</h2>
       <div className="index-container-past">
       {pastEvents.filter((event) => 
       event.name.toLowerCase().includes(searchQuery.toLowerCase())).map((event) => (
