@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Eventful App
+## **Team:**
+ + Rabhi Alqadi
+ + Diana Hudson
+ + Jeff McDonald
+ + Geno Jimenez
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## **Frontend (React App):**
 
-In the project directory, you can run:
+[Deployed]()
 
-### `npm start`
+#### Libraries:
+- React
+- React Router
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### React Router Routes:
+- Home Page: "/"
+  - Display the event calendar and list of upcoming events.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Event Detail Page: "/events/:eventId"
+  - Display detailed information about a specific event.
 
-### `npm test`
+- Create Event Page: "/create-event"
+  - Allow users to create new events.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### React Architecture:
+### Markdown
 
-### `npm run build`
+- App
+  - Header
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - Router
+    - HomePage
+    - EventDetailPage
+    - CreateEventPage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Footer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ ## **Backend (Express):**
+ [Deployed](https://unit3project-1.onrender.com)
+###  Libraries
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Express.js
+- dotenv
+- morgan
+- cors
+- mongoose
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Routes:**
+- GET /events: Retrieve a list of events.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- GET /events/:eventId: Retrieve specific event.
 
-## Learn More
+- POST /events: Create a new event.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Models (ERD):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- |      Event     |
+|----------------|
++----------------+
+| event_id (PK)  |
+| title          |
+| description    |
+| start_date     |
+| end_date       |
+| location       |
+| price          |
+| organizer_name |
+| category       | -->
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Deisgn Mockup
+![My Desktop View](https://i.imgur.com/UDTiXjK.png)
