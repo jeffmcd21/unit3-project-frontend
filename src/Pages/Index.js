@@ -45,6 +45,7 @@ const Landing = () => {
         <input type="input" name="location" placeholder="Event location" />
         <input type="number" name="price" placeholder="Event price" />
         </div>
+        
       </Form>
         <button type="submit">Submit</button>
       </div>
